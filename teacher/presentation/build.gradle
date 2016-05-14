@@ -1,0 +1,132 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']//加载so库
+        }
+    }
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration.getAt("androidCompileSdkVersion")
+    buildToolsVersion globalConfiguration.getAt("androidBuildToolsVersion")
+
+    defaultConfig {
+        minSdkVersion             globalConfiguration.getAt("androidMinSdkVersion")
+        targetSdkVersion          globalConfiguration.getAt("androidTargetSdkVersion")
+        applicationId             globalConfiguration.getAt("androidApplicationId")
+        testInstrumentationRunner globalConfiguration.getAt("androidTestInstrumentationRunner")
+        versionCode               globalConfiguration.getAt("androidVersionCode")
+        versionName               globalConfiguration.getAt("androidVersionName")
+    }
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+    }
+
+    lintOptions {
+        abortOnError false;
+        disable 'InvalidPackage' // Some libraries have issues with this.
+        disable 'OldTargetApi' // Lint gives this warning but SDK 20 would be Android L Beta.
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("../keystore/jkxsx_keystore.jks")
+            storePassword "szr.jkxsx"
+            keyAlias "release"
+            keyPassword "szr.jkxsx.release"
+        }
+        release {
+            storeFile file("../keystore/jkxsx_keystore.jks")
+            storePassword "szr.jkxsx"
+            keyAlias "release"
+            keyPassword "szr.jkxsx.release"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            debuggable false
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+            debuggable true
+        }
+    }
+
+//     //打包渠道
+    productFlavors {
+        home {
+            manifestPlaceholders = [channelName: "home", isFirstLauncher: "false"]
+        }
+    }
+}
+
+dependencies {
+    compile project(':domain')
+    compile project(':data')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    def presentationDependencies = rootProject.ext.presentationDependencies
+    def presentationTestDependencies = rootProject.ext.presentationTestDependencies
+
+    //tools lib
+    compile presentationDependencies.multiDex
+    //界面控件注入框架
+    compile presentationDependencies.butterKnife
+    //依赖注解框架
+    compile presentationDependencies.dagger
+    apt presentationDependencies.daggerCompile
+    provided presentationDependencies.glassFish
+    //日志框架
+    compile presentationDependencies.timber
+    //图片框架
+    compile presentationDependencies.fresco
+    compile presentationDependencies.imagepipeline_okhttp
+    compile presentationDependencies.rxAndroid
+    // ACRA  crash实时上报组件
+    compile presentationDependencies.acra
+    compile presentationDependencies.rey5137Material
+    compile presentationDependencies.appcompat
+    compile presentationDependencies.design
+    compile presentationDependencies.cardview
+    compile presentationDependencies.recyclerview
+
+
+    testCompile presentationTestDependencies.jUnit
+    testCompile presentationTestDependencies.mockito
+    testCompile presentationTestDependencies.hamcrest
+
+    androidTestCompile (presentationTestDependencies.supportTestRunner) {
+        exclude module: 'support-annotations'
+    }
+
+    androidTestCompile (presentationTestDependencies.supportTestRules) {
+        exclude module: 'support-annotations'
+    }
+
+    androidTestCompile presentationTestDependencies.robotiumVersion
+
+    //对于多个dex文件的app,robolectric测试框架存在bug,暂不使用
+    // testCompile 'org.robolectric:robolectric:3.0'
+}

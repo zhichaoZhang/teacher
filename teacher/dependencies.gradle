@@ -1,0 +1,109 @@
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+}
+
+ext {
+    //全局的依赖
+
+    //Android
+    androidBuildToolsVersion = "23.0.2"
+    androidMinSdkVersion = 15
+    androidTargetSdkVersion = 22
+    androidCompileSdkVersion = 23
+
+    //Libraries
+    daggerVersion = '2.0.2'
+    butterKnifeVersion = '6.1.0'
+    rxJavaVersion = '1.1.0'
+    rxAndroidVersion = '1.1.0'
+    javaxAnnotationVersion = '1.0'
+    gsonVersion = '2.3'
+    okHttpVersion = '2.5.0'
+    androidAnotationVersion = '21.0.3'
+    retrofitVersion = '1.9.0'
+    glassfishVersion = '10.0-b28'
+    timberVersion = '3.1.0'
+    frescoVersion = '0.10.0'
+    imagepipeline_okhttp = "0.6.0"
+    recycleViewAnimationVersion = '1.2.0@aar'//列表动画库
+    umengAnalyticsVersion = 'latest.integration'//友盟统计
+    fabButtonVersion = '1.1.4'//发帖按钮
+    acraVersion = '4.6.2'//crash上报库
+    frescoImageScaleVersion = '0.1.0'//支持fresco的图片缩放库
+    multidexVersion = '1.0.1'//多个dex文件库
+    rey5137MaterialVersion = '1.1.1'//material样式库
+    appcompat = '23.1.1'
+    design = '23.1.1'
+    cardview = '23.1.1'
+    recyclerview = '23.1.1'
+
+    //Unit Test
+    jUnitVersion = '4.12'
+    mockitoVersion = '1.10.19'
+    hamcrestVersion = "1.1"
+    robolectricVersion = "3.0"
+
+    //Integration testing
+    supportTestRunnerVersion = "0.3"
+    supportTestRulesVersion = "0.3"
+    robotiumVersion = "5.3.1"
+
+    presentationDependencies = [
+            multiDex            : "com.android.support:multidex:${multidexVersion}",
+            butterKnife         : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            dagger              : "com.google.dagger:dagger:${daggerVersion}",
+            daggerCompile       : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            glassFish           : "org.glassfish:javax.annotation:${glassfishVersion}",
+            timber              : "com.jakewharton.timber:timber:${timberVersion}",
+            fresco              : "com.facebook.fresco:fresco:${frescoVersion}",
+            imagepipeline_okhttp: "com.facebook.fresco:imagepipeline-okhttp:${imagepipeline_okhttp}",
+            rxAndroid: "io.reactivex:rxandroid:${rxAndroidVersion}",
+            recycleViewAnimation: "jp.wasabeef:recyclerview-animators:${recycleViewAnimationVersion}",
+            umengAnalytics      : "com.umeng.analytics:analytics:${umengAnalyticsVersion}",
+            fabButton           : "mbanje.kurt:fabbutton:${fabButtonVersion}",
+            acra                : "ch.acra:acra:${acraVersion}",
+            frescoImageScale    : "com.zzc:com.joye.touchscalewithfresco:${frescoImageScaleVersion}",
+            appcompat           : "com.android.support:appcompat-v7:${appcompat}",
+            design              : "com.android.support:design:${design}",
+            cardview            : "com.android.support:cardview-v7:${cardview}",
+            recyclerview        : "com.android.support:recyclerview-v7:${recyclerview}",
+            rey5137Material     : "com.github.rey5137:material:${rey5137MaterialVersion}"
+    ]
+
+    presentationTestDependencies = [
+            jUnit  : "junit:junit:${jUnitVersion}",
+            mockito: "org.mockito:mockito-core:${mockitoVersion}",
+            hamcrest:"org.hamcrest:hamcrest-library:${hamcrestVersion}",
+            supportTestRunner:  "com.android.support.test:runner:${supportTestRunnerVersion}",
+            supportTestRules:   "com.android.support.test:rules:${supportTestRulesVersion}",
+            robotiumVersion:    "com.jayway.android.robotium:robotium-solo:${robotiumVersion}"
+    ]
+
+    domainDependencies = [
+            rxJava   : "io.reactivex:rxjava:${rxJavaVersion}"
+    ]
+
+    domainTestDependencies = [
+            junit:              "junit:junit:${jUnitVersion}",
+            mockito:            "org.mockito:mockito-core:${mockitoVersion}",
+            hamcrest:           "org.hamcrest:hamcrest-library:${hamcrestVersion}"
+    ]
+
+    dataDependencies = [
+            rxAndroid: "io.reactivex:rxandroid:${rxAndroidVersion}",
+            rxJava   : "io.reactivex:rxjava:${rxJavaVersion}",
+            retrofit : "com.squareup.retrofit:retrofit:${retrofitVersion}",
+            okHttp   : "com.squareup.okhttp:okhttp:${okHttpVersion}"
+    ]
+
+    dataTestDependencies = [
+            junit:              "junit:junit:${jUnitVersion}",
+            mockito:            "org.mockito:mockito-core:${mockitoVersion}",
+            hamcrest:           "org.hamcrest:hamcrest-library:${hamcrestVersion}",
+            robolectric:        "org.robolectric:robolectric:${robolectricVersion}"
+    ]
+}

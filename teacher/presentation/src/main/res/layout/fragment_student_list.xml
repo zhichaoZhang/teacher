@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#eef3f5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/img_text_jksx" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/shape_main_search"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:hint="任课教师或者学生姓名"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textSize="@dimen/typography_f13" />
+    </LinearLayout>
+
+    <View style="@style/grayLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/palette_white"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="姓名"
+            android:textColor="@color/palette_black"
+            android:textSize="@dimen/typography_f17" />
+
+        <TextView
+            android:id="@+id/tv_teacher_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="任课教师"
+            android:textColor="@color/palette_black"
+            android:textSize="@dimen/typography_f17" />
+
+        <TextView
+            android:id="@+id/tv_sign_in"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="签到"
+            android:textColor="@color/palette_black"
+            android:textSize="@dimen/typography_f17" />
+
+        <TextView
+            android:id="@+id/tv_sign_in_num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="签到次数"
+            android:textColor="@color/palette_black"
+            android:textSize="@dimen/typography_f17" />
+
+        <TextView
+            android:id="@+id/tv_class_category"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="上课类别"
+            android:textColor="@color/palette_black"
+            android:textSize="@dimen/typography_f17" />
+
+    </LinearLayout>
+
+    <View style="@style/grayLine" />
+
+    <include layout="@layout/base_list_fragment" />
+</LinearLayout>

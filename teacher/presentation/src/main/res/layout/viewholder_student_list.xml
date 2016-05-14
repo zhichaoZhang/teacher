@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingRight="30dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_student_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="张小三"
+                android:textColor="@color/palette_black"
+                android:textSize="@dimen/typography_f17" />
+
+            <TextView
+                android:id="@+id/tv_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="153-3005-9740"
+                android:textColor="#9da4aa"
+                android:textSize="@dimen/typography_f15" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_teacher_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="刘老师"
+            android:textColor="@color/palette_black"
+            android:textSize="@dimen/typography_f17" />
+
+        <TextView
+            android:id="@+id/tv_sign_in"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="签到"
+            android:textColor="#668fd1"
+            android:textSize="@dimen/typography_f17" />
+
+        <TextView
+            android:id="@+id/tv_sign_in_num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="101次"
+            android:textColor="@color/palette_black"
+            android:textSize="@dimen/typography_f17" />
+
+        <TextView
+            android:id="@+id/tv_class_category"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="游戏课程"
+            android:textColor="@color/palette_black"
+            android:textSize="@dimen/typography_f17" />
+    </LinearLayout>
+
+    <View style="@style/grayLine" />
+
+</LinearLayout>

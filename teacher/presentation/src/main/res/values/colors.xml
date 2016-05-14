@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primary_dark">#00BCD4</color>
+    <color name="primary">#00cbe2</color>
+    <color name="accent">#424242</color>
+    <color name="white">#ffffff</color>
+
+
+    <!-- 调色板 -->
+    <color name="palette_red">#FD5359</color>
+    <color name="palette_blue">#1a8eb2</color>
+    <color name="palette_orange">#FE9B20</color>
+    <color name="palette_white">#FFFFFF</color>
+    <color name="palette_white_smoke">#f8f8f8</color>
+    <color name="palette_white_light">#ebebeb</color>
+    <color name="palette_aluminium">#8a8c92</color>
+    <color name="palette_gray">#eeeeee</color>
+    <color name="palette_gray_mid">#C2C2C2</color>
+    <color name="palette_gray_light">#E5E5E5</color>
+    <color name="palette_gray_white">#EFEFEF</color>
+    <color name="palette_black">#2F323A</color>
+    <color name="palette_black_mid">#4E5057</color>
+    <color name="palette_black_light">#606470</color>
+    <color name="palette_brown">#680713</color>
+    <color name="palette_black_translucent">#7f000000</color>
+    <color name="palette_black_50">#7f000000</color>
+    <color name="palette_gray_40">#7fA7A9AE</color>
+    <color name="palette_transparent">#00000000</color>
+    <color name="palette_orange_95">#f0FE9B20</color>
+    <color name="palette_orange_30">#4dFE9B20</color>
+    <color name="palette_black_15">#9f000000</color>
+    <color name="palette_black_30">#48000000</color>
+    <color name="palette_green">#7ED321</color>
+    <color name="palette_white_90">#E6EBEBEB</color>
+    <color name="near_bg">#f7f7f7</color>
+    <color name="near_list_line_gray">#efefef</color>
+    <color name="palette_f7f7f7">#f7f7f7</color>
+    <color name="palette_alabaster">#FBFBFB</color>
+    <color name="palette_rosewood">#680713</color>
+    <color name="loading_background_color">#88292421</color>
+    <color name="loading_progress_circle_color">#C0C0C0</color>
+
+    <color name="palette_528caf">#528caf</color>
+    <color name="palette_ededee">#ededee</color>
+    <color name="palette_feffff">#feffff</color>
+    <color name="palette_f6f7f8">#f6f7f8</color>
+    <color name="palette_7eade7">#7eade7</color>
+    <color name="palette_c9cacb">#c9cacb</color>
+    <color name="palette_eeeeee">#eeeeee</color>
+    <color name="palette_4b79b4">#4b79b4</color>
+    <color name="palette_d7d7d7">#d7d7d7</color>
+    <color name="palette_f0f0f0">#f0f0f0</color>
+
+</resources>

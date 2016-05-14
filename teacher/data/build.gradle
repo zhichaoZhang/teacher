@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration.getAt("androidCompileSdkVersion")
+    buildToolsVersion globalConfiguration.getAt("androidBuildToolsVersion")
+
+    defaultConfig {
+        minSdkVersion             globalConfiguration.getAt("androidMinSdkVersion")
+        targetSdkVersion          globalConfiguration.getAt("androidTargetSdkVersion")
+        testInstrumentationRunner globalConfiguration.getAt("androidTestInstrumentationRunner")
+        versionCode               globalConfiguration.getAt("androidVersionCode")
+        versionName               globalConfiguration.getAt("androidVersionName")
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+    }
+
+    lintOptions {
+        abortOnError false;
+        disable 'InvalidPackage' // Some libraries have issues with this.
+        disable 'OldTargetApi' // Lint gives this warning but SDK 20 would be Android L Beta.
+    }
+}
+
+dependencies {
+    compile project(':domain')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    def dataDependencies = rootProject.ext.dataDependencies
+    compile dataDependencies.retrofit
+    compile dataDependencies.okHttp
+    compile dataDependencies.rxJava
+
+    def dataTestDependencies = rootProject.ext.dataTestDependencies
+
+    testCompile dataTestDependencies.junit
+    testCompile dataTestDependencies.mockito
+    testCompile dataTestDependencies.hamcrest
+    testCompile dataTestDependencies.robolectric
+}

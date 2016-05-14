@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/dv_teacher_avatar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="60dp"
+        app:placeholderImage="@color/palette_gray"
+        app:roundedCornerRadius="70dp" />
+
+    <TextView
+        android:id="@+id/tv_teacher_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_toRightOf="@+id/dv_teacher_avatar"
+        android:text="杜淼"
+        android:textColor="#6d7486"
+        android:textSize="@dimen/typography_f20" />
+
+    <TextView
+        android:id="@+id/tv_teacher_graduate_school"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_teacher_name"
+        android:layout_below="@+id/tv_teacher_name"
+        android:layout_marginTop="10dp"
+        android:text="中国航空航天大学"
+        android:textColor="#3995e7"
+        android:textSize="@dimen/typography_f20" />
+
+    <LinearLayout
+        android:id="@+id/ll_teacher_teach_class"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/tv_teacher_graduate_school"
+        android:layout_below="@+id/tv_teacher_graduate_school"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="探索思考课程\n(25人次)"
+            android:textColor="#6d7486"
+            android:textSize="@dimen/typography_f14" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/palette_gray" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="自学合作课程\n(30人次)"
+            android:textColor="#6d7486"
+            android:textSize="@dimen/typography_f14" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/palette_gray" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="游戏课程\n(200人次)"
+            android:textColor="#6d7486"
+            android:textSize="@dimen/typography_f14" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_teacher_intro"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ll_teacher_teach_class"
+        android:layout_below="@+id/ll_teacher_teach_class"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:lineSpacingExtra="5dp"
+        android:text="本人是中国舞蹈家协会注册舞蹈教师.曾于2011.12.10获得中国舞蹈家协会7-8级证书."
+        android:textColor="@color/palette_black" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/dv_teach_video"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="50dp"
+        app:placeholderImage="@drawable/img_defult_video"
+        app:placeholderImageScaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dv_teach_video"
+        android:layout_below="@+id/dv_teach_video"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_teach_video_bg"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:text="教学视频" />
+
+    <View
+        style="@style/grayLine"
+        android:layout_below="@+id/tv_teacher_intro" />
+</RelativeLayout>

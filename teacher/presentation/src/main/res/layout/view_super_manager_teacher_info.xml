@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:background="@color/palette_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="个人资料"
+            android:textColor="@color/palette_black"
+            android:textSize="@dimen/typography_f16" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+
+            />
+    </RelativeLayout>
+
+    <View style="@style/grayLine" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/dv_teacher_avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    app:placeholderImage="@drawable/img_default_avatar"
+                    app:placeholderImageScaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_teacher_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/dv_teacher_avatar"
+                    android:text="教师名称"
+                    android:textSize="@dimen/typography_f13"
+                    android:textColor="@color/palette_black"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="16dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_teacher_graduate_school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中国外语学院"
+                    android:layout_alignLeft="@+id/tv_teacher_name"
+                    android:layout_below="@+id/tv_teacher_name"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:drawablePadding="5dp"
+                    android:textColor="#df6300"
+                    android:textSize="@dimen/typography_f10"
+                    />
+            </RelativeLayout>
+            
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/dv_teacher_pic"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:placeholderImage="@drawable/img_default_pic"
+                app:placeholderImageScaleType="centerCrop"
+                app:actualImageScaleType="centerCrop"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓    名:"
+                    android:textColor="@color/palette_black"
+                    android:textSize="@dimen/typography_f15"
+                    android:layout_marginLeft="20dp"
+                    />
+                <TextView
+                    android:id="@+id/ll_teacher_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="教师姓名"
+                    android:textColor="@color/palette_black"
+                    android:textSize="@dimen/typography_f15"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="年         龄:"
+                    android:textColor="@color/palette_black"
+                    android:textSize="@dimen/typography_f15"
+                    android:layout_marginLeft="20dp"
+                    />
+                <TextView
+                    android:id="@+id/ll_teacher_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="教师年龄"
+                    android:textColor="@color/palette_black"
+                    android:textSize="@dimen/typography_f15"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="工    号:"
+                    android:textColor="@color/palette_black"
+                    android:textSize="@dimen/typography_f15"
+                    android:layout_marginLeft="20dp"
+                    />
+                <TextView
+                    android:id="@+id/ll_teacher_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="教师工号"
+                    android:textColor="@color/palette_black"
+                    android:textSize="@dimen/typography_f15"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="教授课程:"
+                    android:textColor="@color/palette_black"
+                    android:textSize="@dimen/typography_f15"
+                    android:layout_marginLeft="20dp"
+                    />
+                <TextView
+                    android:id="@+id/ll_teacher_teach_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="教授课程"
+                    android:textColor="@color/palette_black"
+                    android:textSize="@dimen/typography_f15"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自我介绍:"
+                    android:textColor="@color/palette_black"
+                    android:textSize="@dimen/typography_f15"
+                    android:layout_marginLeft="20dp"
+                    />
+                <TextView
+                    android:id="@+id/ll_teacher_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="自我介绍"
+                    android:textColor="@color/palette_black"
+                    android:textSize="@dimen/typography_f15"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

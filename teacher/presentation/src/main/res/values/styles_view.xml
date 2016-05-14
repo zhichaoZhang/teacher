@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Text">
+        <item name="android:textSize">@dimen/typography_f10</item>
+        <item name="android:textColor">@color/palette_black_mid</item>
+    </style>
+
+
+    <style name="Text.white.f20" parent="Text">
+        <item name="android:textColor">@color/palette_white</item>
+        <item name="android:textSize">@dimen/typography_f20</item>
+    </style>
+
+    <style name="Text.white.f13" parent="Text">
+        <item name="android:textColor">@color/palette_white</item>
+        <item name="android:textSize">@dimen/typography_f13</item>
+    </style>
+
+    <style name="Text.white.f17" parent="Text">
+        <item name="android:textColor">@color/palette_white</item>
+        <item name="android:textSize">@dimen/typography_f17</item>
+    </style>
+
+    <style name="Text.white.f12" parent="Text">
+        <item name="android:textColor">@color/palette_white</item>
+        <item name="android:textSize">@dimen/typography_f12</item>
+    </style>
+
+    <style name="Text.white.f19" parent="Text">
+        <item name="android:textColor">@color/palette_white</item>
+        <item name="android:textSize">@dimen/typography_f19</item>
+    </style>
+
+    <style name="Text.white.f36" parent="Text">
+        <item name="android:textColor">@color/palette_white</item>
+        <item name="android:textSize">@dimen/typography_f36</item>
+    </style>
+
+    <style name="Text.black_light.f14" parent="Text">
+        <item name="android:textColor">@color/palette_black_light</item>
+        <item name="android:textSize">@dimen/typography_f14</item>
+    </style>
+
+    <style name="Text.black_light.f15" parent="Text">
+        <item name="android:textColor">@color/palette_black_light</item>
+        <item name="android:textSize">@dimen/typography_f15</item>
+    </style>
+
+    <style name="Text.black_light.f16" parent="Text">
+        <item name="android:textColor">@color/palette_black_light</item>
+        <item name="android:textSize">@dimen/typography_f16</item>
+    </style>
+
+    <style name="Text.black_light.f17" parent="Text">
+        <item name="android:textColor">@color/palette_black_light</item>
+        <item name="android:textSize">@dimen/typography_f17</item>
+    </style>
+
+
+    <style name="Text.gray.f13" parent="Text">
+        <item name="android:textColor">@color/palette_gray</item>
+        <item name="android:textSize">@dimen/typography_f13</item>
+    </style>
+
+    <style name="Text.gray.f14" parent="Text">
+        <item name="android:textColor">@color/palette_gray</item>
+        <item name="android:textSize">@dimen/typography_f14</item>
+    </style>
+
+    <style name="Text.gray.f15" parent="Text">
+        <item name="android:textColor">@color/palette_gray</item>
+        <item name="android:textSize">@dimen/typography_f15</item>
+    </style>
+
+    <style name="Text.gray.f17" parent="Text">
+        <item name="android:textColor">@color/palette_gray</item>
+        <item name="android:textSize">@dimen/typography_f17</item>
+    </style>
+
+    <style name="Text.gray.f12" parent="Text">
+        <item name="android:textColor">@color/palette_gray</item>
+        <item name="android:textSize">@dimen/typography_f12</item>
+    </style>
+
+
+    <style name="Text.aluminium.f14" parent="Text">
+        <item name="android:textColor">@color/palette_aluminium</item>
+        <item name="android:textSize">@dimen/typography_f14</item>
+    </style>
+
+    <style name="Text.aluminium.f13" parent="Text">
+        <item name="android:textColor">@color/palette_aluminium</item>
+        <item name="android:textSize">@dimen/typography_f13</item>
+    </style>
+
+    <style name="Text.aluminium.f12" parent="Text">
+        <item name="android:textColor">@color/palette_aluminium</item>
+        <item name="android:textSize">@dimen/typography_f12</item>
+    </style>
+
+    <style name="Text.aluminium.f15" parent="Text">
+        <item name="android:textColor">@color/palette_aluminium</item>
+        <item name="android:textSize">@dimen/typography_f15</item>
+    </style>
+
+    <style name="Text.aluminium.f16" parent="Text">
+        <item name="android:textColor">@color/palette_aluminium</item>
+        <item name="android:textSize">@dimen/typography_f16</item>
+    </style>
+
+
+    <style name="Text.orange.f13" parent="Text">
+        <item name="android:textColor">@color/palette_orange</item>
+        <item name="android:textSize">@dimen/typography_f13</item>
+    </style>
+
+    <style name="Text.orange.f14" parent="Text">
+        <item name="android:textColor">@color/palette_orange</item>
+        <item name="android:textSize">@dimen/typography_f14</item>
+    </style>
+
+    <style name="Text.orange.f15" parent="Text">
+        <item name="android:textColor">@color/palette_orange</item>
+        <item name="android:textSize">@dimen/typography_f15</item>
+    </style>
+
+    <style name="Text.orange.f16" parent="Text">
+        <item name="android:textColor">@color/palette_orange</item>
+        <item name="android:textSize">@dimen/typography_f16</item>
+    </style>
+
+    <style name="Text.orange.f19" parent="Text">
+        <item name="android:textColor">@color/palette_orange</item>
+        <item name="android:textSize">@dimen/typography_f19</item>
+    </style>
+
+    <style name="Text.orange.f30" parent="Text">
+        <item name="android:textColor">@color/palette_orange</item>
+        <item name="android:textSize">@dimen/typography_f30</item>
+    </style>
+
+    <style name="Text.orange.f18" parent="Text">
+        <item name="android:textColor">@color/palette_orange</item>
+        <item name="android:textSize">@dimen/typography_f18</item>
+    </style>
+
+    <style name="Text.orange.f17" parent="Text">
+        <item name="android:textColor">@color/palette_orange</item>
+        <item name="android:textSize">@dimen/typography_f17</item>
+    </style>
+
+    <style name="Text.orange.f22" parent="Text">
+        <item name="android:textColor">@color/palette_orange</item>
+        <item name="android:textSize">@dimen/typography_f22</item>
+    </style>
+
+    <style name="Text.orange.f28" parent="Text">
+        <item name="android:textColor">@color/palette_orange</item>
+        <item name="android:textSize">@dimen/typography_f28</item>
+    </style>
+
+    <style name="Text.brown.f15" parent="Text">
+        <item name="android:textColor">@color/palette_brown</item>
+        <item name="android:textSize">@dimen/typography_f15</item>
+    </style>
+
+    <style name="Text.brown.f16" parent="Text">
+        <item name="android:textColor">@color/palette_brown</item>
+        <item name="android:textSize">@dimen/typography_f16</item>
+    </style>
+
+    <style name="Text.orange.f12" parent="Text">
+        <item name="android:textColor">@color/palette_orange</item>
+        <item name="android:textSize">@dimen/typography_f12</item>
+    </style>
+
+
+    <style name="Text.rosewood.f16" parent="Text">
+        <item name="android:textColor">@color/palette_rosewood</item>
+        <item name="android:textSize">@dimen/typography_f16</item>
+    </style>
+
+    <style name="grayLine">
+        <item name="android:background">@color/palette_gray</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+</resources>
